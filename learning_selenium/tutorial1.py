@@ -1,5 +1,5 @@
 # Note: Major changes has happened to this code that may be different from the original video
-# Original videohttps://www.youtube.com/watch?v=UOsRrxMKJYk
+# Original video https://www.youtube.com/watch?v=UOsRrxMKJYk
 # you can also checkout my youtube channel here https://www.youtube.com/@dalicodes/videos
 
 from selenium import webdriver
@@ -15,6 +15,7 @@ website = 'https://www.adamchoi.co.uk/teamgoals/detailed'
 
 options = Options()
 options.add_experimental_option("detach", True)
+options.headless = False
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 driver.get(website)
 all_matches_button = driver.find_element(By.XPATH, '//label[@analytics-event="All matches"]')
