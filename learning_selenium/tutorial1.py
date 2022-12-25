@@ -1,5 +1,6 @@
 # link to the video
 # https://www.youtube.com/watch?v=UOsRrxMKJYk
+# you can also checkout my youtube channel here https://www.youtube.com/@dalicodes/videos
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
