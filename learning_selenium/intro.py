@@ -23,7 +23,7 @@ options.add_experimental_option(
     "prefs", {"profile.managed_default_content_settings.images": 2}
 )
 
-PATH = '/Users/dalmas.otieno/Documents/youtube/fifa-world-cup-data-analysis/cromedriver'
+PATH = ''
 driver = webdriver.Chrome(PATH, options=options)
 
 URL = 'https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022/scores-fixtures?country=UG&wtw-filter=ALL'

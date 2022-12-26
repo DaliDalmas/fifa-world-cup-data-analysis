@@ -1,0 +1,6 @@
+id,match_kind,date_time,first_team,second_team,first_team_score,second_team_score,first_team_posession,second_team_possession
+groupaqatarecuador,Group A,19 : 00  -  20 NOV 2022,QATAR,ECUADOR,0,2,42%,50%
+groupbenglandiran,Group B,16 : 00  -  21 NOV 2022,ENGLAND,IRAN,6,2,72%,19%
+groupasenegalnetherlands,Group A,19 : 00  -  21 NOV 2022,SENEGAL,NETHERLANDS,0,2,44%,45%
+groupbunitedstateswales,Group B,22 : 00  -  21 NOV 2022,UNITED STATES,WALES,1,1,51%,39%
+groupcargentinasaudiarabia,Group C,13 : 00  -  22 NOV 2022,ARGENTINA,SAUDI ARABIA,1,2,64%,24%
