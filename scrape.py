@@ -1,27 +1,33 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-import time
-import pandas as pd
+from selenium import webdriver # provides all the WebDriver implementations
+from selenium.webdriver.chrome.service import Service # provides service that will execute ChromeDriverManager
+from webdriver_manager.chrome import ChromeDriverManager # installs chrome driver to the environment
+from selenium.webdriver.chrome.options import Options # provides extra settings for the functionality of the driver
+from selenium.webdriver.common.by import By # helps when locating web elements
+from selenium.webdriver.common.keys import Keys # helps when interacting with web pages by sending commands. In this case we shall be sending keyboard presses
+import time # will helpo us to pause execution
+import pandas as pd # help in handling data in dataframes
 
 website = 'https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022/scores-fixtures?country=UG&wtw-filter=ALL'
-options = Options()
-options.add_experimental_option("detach", True)
-driver1 = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-driver1.get(website)
+options = Options() # instantiate Options object
+options.add_experimental_option("detach", True) # dont automatically quit the window after code execution
+driver1 = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options) # instantiate a driver object that interacts with web pages
+driver1.get(website) # navigate to a page given by the URL
 
 def accept_cookies(driver_object):
+    """
+    locates and presses the accept cookies button
+    """
     time.sleep(15)
     accept_cookies_button = driver_object.find_element(By.XPATH, '//button[@id="onetrust-accept-btn-handler"]')
     accept_cookies_button.click()
 
 def animate_scroll(driver_object):
-        for i in range(3):
-            time.sleep(1)
-            driver_object.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN)
+    """
+    scrolls the web page down. This is just for fun. Animations make my work lively
+    """
+    for i in range(3):
+        time.sleep(1)
+        driver_object.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN)
 
 def extract_data(driver_object):
     # General information
