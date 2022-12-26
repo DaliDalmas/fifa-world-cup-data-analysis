@@ -78,7 +78,7 @@ driver1.quit()
 
 all_matches_general_info = []
 all_matches_stats = []
-for hlink in all_h_links[:5]:
+for hlink in all_h_links:
     driver2 = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver2.get(hlink)
     accept_cookies(driver_object=driver2)
