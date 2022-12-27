@@ -17,17 +17,18 @@ def accept_cookies(driver_object):
     """
     locates and presses the accept cookies button
     """
-    time.sleep(15)
+    time.sleep(15) # wait for the site to fully load
     accept_cookies_button = driver_object.find_element(By.XPATH, '//button[@id="onetrust-accept-btn-handler"]')
     accept_cookies_button.click()
 
 def animate_scroll(driver_object):
     """
-    scrolls the web page down. This is just for fun. Animations make my work lively
+    scrolls the web page down. This is just for fun. Animations make my work lively.
     """
-    for i in range(3):
+    # we are goint to send page down key strokes to the driver
+    for i in range(3): # to repeat the key stroke three times
         time.sleep(1)
-        driver_object.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN)
+        driver_object.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN) # sends key stroke PageDown to the driver
 
 def extract_data(driver_object):
     # General information
@@ -79,6 +80,7 @@ all_h_links = []
 for anchor_div in anchor_divs:
     hlink = anchor_div.get_attribute('href')
     all_h_links.append(hlink)
+print(all_h_links)
 animate_scroll(driver1)
 driver1.quit()
 
