@@ -4,4 +4,4 @@ Scraped from: https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar20
 
 Scraping code: https://github.com/DaliDalmas/fifa-world-cup-data-analysis/blob/main/scrape.py
 
-Video showing how the code was written: webscraping tutorial in python's selenium
+Video showing how the code was written: https://www.youtube.com/watch?v=-OlpkBKJWig
